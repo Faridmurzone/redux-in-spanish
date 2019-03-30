@@ -7,7 +7,7 @@ Redux tiene una herencia mixta. Es similar a ciertos patrones y tecnologías, pe
 Puede Redux ser considerado una implementación de [Flux](https://facebook.github.io/flux/)?
 [Sí](https://twitter.com/fisherwebdev/status/616278911886884864) y [no](https://twitter.com/andrestaltz/status/616270755605708800).
 
-(No te preocupes, [los creadores de Flux](https://twitter.com/jingc/status/616608251463909376) [lo aprueba](https://twitter.com/fisherwebdev/status/616286955693682688), si es lo que necesitas saber.)
+(No te preocupes, [los creadores de Flux](https://twitter.com/jingc/status/616608251463909376) [lo aprueban](https://twitter.com/fisherwebdev/status/616286955693682688), si es lo que necesitas saber.)
 
 Redux se inspiro en muchas de las cualidades importantes de Flux. Como Flux, Redux te hace concentrar la lógica de actualización de modelos en una capa específica de tu aplicación ("stores" en Flux, "reducers" en Redux). En vez de dejar al código de la aplicación modificar los datos directamente, ambos te hacen describir cada mutación como objetos planos llamados "acciones".
 
@@ -43,7 +43,7 @@ A diferencia de Immutable, Baobab todavía no implemente ninguna estructura de d
 
 ### Rx
 
-[Reactive Extensions](https://github.com/Reactive-Extensions/RxJS) (y su [reescritura moderna](https://github.com/ReactiveX/RxJS) en proceso) es una formas magnífica de manejar la complejidad de aplicaciones asíncronas. De hecho [hay un esfuerzo de crear una librería para controlar la interacción entre humano y computadora como observables independientes](http://cycle.js.org).
+[Reactive Extensions](https://github.com/Reactive-Extensions/RxJS) (y su [reescritura moderna](https://github.com/ReactiveX/RxJS) en proceso) es una forma magnífica de manejar la complejidad de aplicaciones asíncronas. De hecho [hay un esfuerzo de crear una librería para controlar la interacción entre humano y computadora como observables independientes](http://cycle.js.org).
 
 ¿Tiene sentido usar Redux junto con Rx? ¡Seguro! Funcionan genial juntos. Por ejemplo, es fácil exponer el store de Redux como un observable:
 
@@ -61,6 +61,6 @@ function toObservable(store) {
 
 De forma similar, puedes componer diferentes streams asíncronos para convertirlos en acciones antes de enviarlos al `store.dispatch()`.
 
-La pregunta es: de verdad necesitas REdux si ya usar Rx? Probablemente no. No es dificil [reimplementar Redux en Rx](https://github.com/jas-chen/rx-redux). Algunos dicen, que son solo 2 líneas usando el método `.scan()` de Rx. ¡Y probablemente lo sea!
+La pregunta es: de verdad necesitas Redux si ya usas Rx? Probablemente no. No es dificil [reimplementar Redux en Rx](https://github.com/jas-chen/rx-redux). Algunos dicen, que son solo 2 líneas usando el método `.scan()` de Rx. ¡Y probablemente lo sea!
 
 Si tienes dudas, revisa el código fuente de Redux (no hay mucho ahí), así como su ecosistema (por ejemplo, [las herramientas de desarrolladores](https://github.com/gaearon/redux-devtools)). Si no te interesa tanto eso y quieres que los datos reactivos simplemente fluyan, probablemente quieras usar algo como [Cycle](http://cycle.js.org) en su lugar, o incluso combinarlos con Redux. ¡Déjanos saber como resulta eso!
